@@ -26,7 +26,6 @@ non-whitespace, printable ASCII characters.
 
 `(115, 123) -> 115 116 117 118 119 $ 121 122 123`
 
-## Functional style code
 ## [Scala], 183 bytes
 
 <!-- language-all: lang-scala -->
@@ -36,8 +35,6 @@ non-whitespace, printable ASCII characters.
         val r = (a to b).map{
           x => if(x % 8 == 0) Random.nextInt(c.length).toChar.toString else String.valueOf(x)}
         r}
-
-##Inlined version
 
 ## [Scala], 134 bytes
 
