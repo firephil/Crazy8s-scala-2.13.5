@@ -7,8 +7,8 @@ object Main {
     val chars = (33 to 47) ++ (58 to 126)
 
     val list :LazyList[String] = LazyList.range(a,b).map {
-      case x if (x== 0)  => String.valueOf(x)
-      case x if (x % 8 == 0) => chars(Random.nextInt(chars.length)).toChar.toString
+      case x if x== 0  => String.valueOf(x)
+      case x if x % 8 == 0 => chars(Random.nextInt(chars.length)).toChar.toString
       case x => String.valueOf(x)}
 
     list
