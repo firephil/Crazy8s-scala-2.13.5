@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d9604ae50c5e423f8f045ff4585dc82d)](https://app.codacy.com/gh/firephil/Crazy8s-scala-2.13.5?utm_source=github.com&utm_medium=referral&utm_content=firephil/Crazy8s-scala-2.13.5&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.com/firephil/Crazy8s-scala-2.13.5.svg?branch=master)](https://travis-ci.com/firephil/Crazy8s-scala-2.13.5)
 
 ## Crazy 8s Code Golf Challenge
