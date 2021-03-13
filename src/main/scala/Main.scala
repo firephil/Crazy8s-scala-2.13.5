@@ -57,6 +57,8 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
+    // print the character set of the replacement characters
+
     val characters = ((33 to 47)++(58 to 126)).map(x => x.toChar)
     println(characters)
     val n = 200000
