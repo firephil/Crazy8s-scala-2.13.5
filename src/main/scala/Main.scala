@@ -56,12 +56,15 @@ object Main {
   def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)random.nextInt(((33 to 47)++(58 to 126)).length).toChar.toString else String.valueOf(x))
 
   def main(args: Array[String]): Unit = {
-    val n = 1_000_0000
+
+    val characters = ((33 to 47)++(58 to 126)).map(x => x.toChar)
+    println(characters)
+    val n = 20
 
     //Timer.average(crazy8(1, 100_0000))(10)
-    Timer.average(crazy8Parallel(1,n))(2)
+    //Timer.average(crazy8Parallel(1,n))(2)
     //Timer.average(crazy8ParallelArray(1,100_0000))(10)
-    Timer.average(crazy8Vec(1,n))(2)
+   // Timer.average(crazy8Vec(1,n))(2)
 
   }
 }
