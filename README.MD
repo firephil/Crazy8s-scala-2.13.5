@@ -36,13 +36,13 @@ non-whitespace, printable ASCII characters.
           x => if(x % 8 == 0) Random.nextInt(c.length).toChar.toString else String.valueOf(x)}
         r}
 
-## [Scala], 132 bytes
+# [Scala], 132 bytes
 
 <!-- language-all: lang-scala -->
 
     def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)random.nextInt(((33 to 47)++(58 to 126)).length).toChar.toString else String.valueOf(x))
 
-[Try it online!][TIO-km7xg1tu]
+[Try it online!][TIO-km89mvcm]
 
 [Scala]: http://www.scala-lang.org/
-[TIO-km7xg1tu]: https://tio.run/##VY/NasMwEITveoq9FCQShBP3JxRcaHMKtBTqJ1jb60RFloS0DobSZ3el9tTL7swy88GmHi2uZgo@MqRidO@tpZ6Nd3qaGTtL@tUkfpnHkaL4F53ZWP2BbvCTEMJ3n7kHb2gc0MLkhgTPIXwJgHWgEVqJjyfH265M1QACe@hgwiCX5smMcrk5NE2l4i9Qu8zIQSllXZfk7YPabOTdoejd/l4pbcmd@aI0@@MFY14tR@POQDYR/Gl9RTvTe2YrtQKEfGPZyl21ratSLJ8p8b3@AA "Scala – Try It Online"
+[TIO-km89mvcm]: https://tio.run/##TZDPasMwDMbvfgpdBjYtJl32pwxS6HYabAyWJ1ASpXVx7GArXcbYs2f2usMu0ifx@ySh2KLFxQyjDwwxF7r11lLLxjs9TIyNJf1iIj9OfU9B/KEnPKOO1E7B8Keus6B3dJ0fhPDNKfnhFY0DmplcF2E/jl9CnNFC@KWgAkcf8N8olQBYOuqhlvjw7Hjd5KgqQGAPDQw4yrnamV7OV9uqKtRllHZpSQKllGWZyZt7tVrJ223Wm@s7pbQld@Cj0uyfjhhSqjkYdwCykeCidbptorc0W6kFYEw9lrXcFOuyyMb8AiW@lx8 "Scala – Try It Online"
