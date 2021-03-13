@@ -8,7 +8,7 @@ object Timer {
 
   def time[R](f: => R): Long = {
     val t0 = System.nanoTime()
-    val r = f
+    f //run the function
     val t1 = System.nanoTime()
 
     val time = (t1 - t0) / 1000
@@ -35,7 +35,7 @@ object Timer {
   def average[R](f: => R)(times: Int = 10): Unit = {
 
     // collect the values for each run in a vector and then sum the result
-    val result = (for (a <- 1 to times) yield time(f)).sum
+    val result = (for (_ <- 1 to times) yield time(f)).sum
 
     //average time taken
     val average = result / (times * 1000d)
