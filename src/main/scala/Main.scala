@@ -59,12 +59,12 @@ object Main {
 
     val characters = ((33 to 47)++(58 to 126)).map(x => x.toChar)
     println(characters)
-    val n = 20
+    val n = 200000
 
-    //Timer.average(crazy8(1, 100_0000))(10)
-    //Timer.average(crazy8Parallel(1,n))(2)
-    //Timer.average(crazy8ParallelArray(1,100_0000))(10)
-   // Timer.average(crazy8Vec(1,n))(2)
+    Timer.average(crazy8(1, n))(10)
+    Timer.average(crazy8Parallel(1,n))(2)
+    Timer.average(crazy8ParallelArray(1,n))(10)
+    Timer.average(crazy8Vec(1,n))(2)
 
   }
 }
