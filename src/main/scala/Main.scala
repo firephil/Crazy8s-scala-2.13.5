@@ -1,6 +1,6 @@
 import java.security.SecureRandom
 import scala.collection.parallel.immutable.ParVector
-
+import scala.collection.parallel.mutable.ParArray
 
 object Main {
 
@@ -29,16 +29,39 @@ object Main {
     vec
   }
 
+  def crazy8ParallelArray(a: Int, b: Int): ParArray[String] = {
+    val chars = (33 to 47) ++ (58 to 126)
+
+    val array :ParArray[String] = ParArray.range(a,b).map {
+      case x if x % 8 == 0 => chars(random.nextInt(chars.length)).toChar.toString
+      case x => String.valueOf(x)}
+
+    array
+  }
+
+  // Using a Vector
+  def crazy8Vec(a: Int, b: Int) = {
+    val chars = (33 to 47) ++ (58 to 126)
+
+    val vec = Vector.range(a,b).map {
+      case x if x % 8 == 0 => chars(random.nextInt(chars.length)).toChar.toString
+      case x => String.valueOf(x)}
+
+    vec
+  }
+
   //Golfed inlined version
   // Don't annotate types, use a range and IndexedSeq, Vector, eliminate variable declarations,spaces etc
 
-  def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)random.nextInt(((33 to 47) ++ (58 to 126)).length).toChar.toString else String.valueOf(x))
-
-
-
+  def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)random.nextInt(((33 to 47)++(58 to 126)).length).toChar.toString else String.valueOf(x))
 
   def main(args: Array[String]): Unit = {
-    Timer.average(crazy8(1, 100_0000))(10)
-    Timer.average(crazy8Parallel(1,100_0000))(10)
+    val n = 1_000_0000
+
+    //Timer.average(crazy8(1, 100_0000))(10)
+    Timer.average(crazy8Parallel(1,n))(2)
+    //Timer.average(crazy8ParallelArray(1,100_0000))(10)
+    Timer.average(crazy8Vec(1,n))(2)
+
   }
 }

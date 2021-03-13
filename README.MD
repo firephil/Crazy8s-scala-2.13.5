@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/firephil/Crazy8s-scala-2.13.5.svg?branch=master)](https://travis-ci.com/firephil/Crazy8s-scala-2.13.5)
-[[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a6208792dbfa426db7d9dfae796fe247)](https://www.codacy.com/gh/firephil/Crazy8s-scala-2.13.5/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=firephil/Crazy8s-scala-2.13.5&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a6208792dbfa426db7d9dfae796fe247)](https://www.codacy.com/gh/firephil/Crazy8s-scala-2.13.5/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=firephil/Crazy8s-scala-2.13.5&amp;utm_campaign=Badge_Grade)
 ## Crazy 8s Code Golf Challenge
 
 https://codegolf.stackexchange.com/questions/104356/crazy-8s-code-golf/104482#104482
@@ -36,13 +36,13 @@ non-whitespace, printable ASCII characters.
           x => if(x % 8 == 0) Random.nextInt(c.length).toChar.toString else String.valueOf(x)}
         r}
 
-## [Scala], 134 bytes
+## [Scala], 132 bytes
 
 <!-- language-all: lang-scala -->
 
-    def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)Random.nextInt(((33 to 47) ++ (58 to 126)).length).toChar.toString else String.valueOf(x))
+    def S(a:Int,b:Int)= a to b map(x=>if(x%8==0)random.nextInt(((33 to 47)++(58 to 126)).length).toChar.toString else String.valueOf(x))
 
-[Try it online!][TIO-km6lw4uh]
+[Try it online!][TIO-km7xg1tu]
 
 [Scala]: http://www.scala-lang.org/
-[TIO-km6lw4uh]: https://tio.run/##VY/dSsQwEIXv8xRzI0zYJXStP4tQQb0SFME@wbSd7kbSJDRTKYjPXhP2ypuZOcM5H5zUk6PNTjHMAqkI0wfnuBcbvJkWoc6xebNJnpdx5Fn9sy5infkkP4RJKRW6r5yDd7IeeBX2Q4KnGH8UwDbwCC3Sw6uXfVemboBAAnQwUcS1ebQjrlfHpqn0BWh8ZmQjItZ1cd7ca9jtAG@PRR2u77Q2jv1JztpIeDnTnFcrs/UnYJcYLrf5JrfwR6ZrvQHE/BNs8VDt66oESzetfrc/ "Scala – Try It Online"
+[TIO-km7xg1tu]: https://tio.run/##VY/NasMwEITveoq9FCQShBP3JxRcaHMKtBTqJ1jb60RFloS0DobSZ3el9tTL7swy88GmHi2uZgo@MqRidO@tpZ6Nd3qaGTtL@tUkfpnHkaL4F53ZWP2BbvCTEMJ3n7kHb2gc0MLkhgTPIXwJgHWgEVqJjyfH265M1QACe@hgwiCX5smMcrk5NE2l4i9Qu8zIQSllXZfk7YPabOTdoejd/l4pbcmd@aI0@@MFY14tR@POQDYR/Gl9RTvTe2YrtQKEfGPZyl21ratSLJ8p8b3@AA "Scala – Try It Online"
