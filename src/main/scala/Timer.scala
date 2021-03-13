@@ -34,6 +34,7 @@ object Timer {
 
   def average[R](f: => R)(times: Int = 10): Unit = {
 
+    // collect the values for each run in a vector and then sum the result
     val result = (for (a <- 1 to times) yield time(f)).sum
 
     //average time taken
