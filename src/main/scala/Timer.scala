@@ -34,11 +34,7 @@ object Timer {
 
   def average[R](f: => R)(times: Int = 10): Unit = {
 
-    var result = 0L
-
-    // use for with range
-    for (a <- 1 to times)
-      result = result + time(f)
+    val result = (for (a <- 1 to times) yield time(f)).sum
 
     //average time taken
     val average = result / (times * 1000d)
